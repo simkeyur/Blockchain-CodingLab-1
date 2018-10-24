@@ -1,0 +1,24 @@
+{
+  "$class": "org.capgemeni.sogeti.Consultant",
+  "consultantId": "CONSULTANT1",
+  "employee": "resource:org.capgemeni.sogeti.Employee#EMP1"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Consultant",
+  "consultantId": "CONSULTANT2",
+  "employee": "resource:org.capgemeni.sogeti.Employee#EMP2"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Consultant",
+  "consultantId": "CONSULTANT3",
+  "employee": "resource:org.capgemeni.sogeti.Employee#EMP3"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Consultant",
+  "consultantId": "CONSULTANT4",
+  "employee": "resource:org.capgemeni.sogeti.Employee#EMP4"
+}
+

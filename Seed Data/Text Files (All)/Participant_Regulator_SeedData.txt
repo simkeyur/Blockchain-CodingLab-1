@@ -1,0 +1,6 @@
+{
+  "$class": "org.capgemeni.sogeti.Regulator",
+  "regulatorId": "REG1",
+  "name": "Doug Jones",
+  "company": "resource:org.capgemeni.sogeti.Company#COMPANY1"
+}

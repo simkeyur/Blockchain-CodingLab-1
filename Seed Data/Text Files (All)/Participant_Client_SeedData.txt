@@ -1,0 +1,17 @@
+{
+  "$class": "org.capgemeni.sogeti.Client",
+  "clientId": "CLIENT1",
+  "name": "APA"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Client",
+  "clientId": "CLIENT2",
+  "name": "BNSF"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Client",
+  "clientId": "CLIENT3",
+  "name": "Pier1 Imports"
+}

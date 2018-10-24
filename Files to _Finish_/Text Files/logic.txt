@@ -1,0 +1,61 @@
+/* global getAssetRegistry getFactory emit query */
+
+/**
+* Track a client's consultant request 
+* @param {org.capgemeni.sogeti.RequestConsultant} request - the request to be processed
+* @transaction
+*/
+//TODO: Write 'RequestConsultant' trx logic 
+async function requestConsultant(request) { 
+   console.log('in tx');
+
+  // request object properties: 
+   // (buyer) request.Client
+   // (asset) request.Consultant
+
+   // set the reserving client of the consultant
+  
+   // persist the state of the commodity
+
+   // begin SOW asset request 
+}
+
+/**
+* Track a company's SOW proposal
+* @param {org.capgemeni.sogeti.ProposeSOW} proposal - the proposal to be processed
+* @transaction
+*/
+async function proposeSOW(proposal) {
+   console.log('in tx');
+
+   // (price proposal) proposal.priceAgreement
+   // (asset) proposal.sow
+
+   // issue the SOW proposal by company, which specifices the term & conditions (priceAgreement) 
+   proposal.sow.priceAgreement = proposal.priceAgreement;
+   proposal.sow.status = "Proposed"; // enum: proposed
+   const assetRegistry = await getAssetRegistry('org.capgemeni.sogeti.SOW');
+
+   // persist the state of the sow
+   await assetRegistry.update(proposal.sow);
+}
+
+/**
+* Track a client's sow agreement
+* @param {org.capgemeni.sogeti.FinalizeAgreement} agreement - the agreement to be processed
+* @transaction
+*/
+async function FinalizeAgreement(agreement) { // eslint-disable-line no-unused-vars
+   console.log('in tx');
+
+   // (terms acceptance) agreement.acceptTerms
+   // (asset) agreement.sow
+
+   // finalize SOW process with client acceptance/denial of terms & conditions (priceAgreement) 
+   agreement.sow.status =  agreement.acceptTerms ? "Accepted" : "Rejected";
+   const assetRegistry = await getAssetRegistry('org.capgemeni.sogeti.SOW');
+
+   // persist the state of the sow
+   await assetRegistry.update(agreement.sow);
+}
+

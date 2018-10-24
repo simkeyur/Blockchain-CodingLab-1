@@ -1,0 +1,91 @@
+/*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+namespace org.capgemeni.sogeti
+
+participant Company identified by companyId {
+ o String companyId
+ o String name
+}
+
+participant Client identified by clientId {
+ o String clientId
+ o String name
+}
+
+participant Employee identified by empId {
+ o String empId
+ o String name
+ o String title
+ o String type
+ o String skill1
+ o String skill2
+ o String skill3
+ --> Company company
+ --> Consultant consultant optional
+}
+
+participant Regulator identified by regulatorId {
+ o String regulatorId
+ o String name
+ --> Company company
+}
+
+asset Consultant identified by consultantId {
+   o String consultantId
+   --> Employee employee
+   --> Client client optional
+}
+
+enum SowStatus {
+ o Requested
+ o Proposed
+ o Accepted
+ o Rejected
+}
+
+asset SOW identified by sowId {
+ o String sowId
+ o String requirement1
+ o String requirement2
+ o String requirement3
+ o String startDate
+ o String endDate
+ o SowStatus status // default = "Requested"
+ o Double priceAgreement default = 0.0
+ --> Employee employee
+ --> Client client
+}
+
+transaction RequestConsultant {
+ o String sowId
+ o String requirement1
+ o String requirement2
+ o String requirement3
+ o String startDate
+ o String endDate
+ o Double askingPrice optional
+ --> Consultant consultant
+ --> Client client
+}
+
+transaction FinalizeAgreement {
+ o Boolean acceptTerms
+ --> SOW sow
+}
+
+transaction ProposeSOW {
+ o Double priceAgreement
+ --> SOW sow
+}

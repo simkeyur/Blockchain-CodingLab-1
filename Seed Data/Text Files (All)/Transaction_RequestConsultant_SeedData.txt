@@ -1,0 +1,25 @@
+// Request 1st Consultant
+{
+  "$class": "org.capgemeni.sogeti.RequestConsultant",
+  "sowId": "SOW1",
+  "requirement1": "Deliver Accounting Web App",
+  "requirement2": "",
+  "requirement3": "",
+  "startDate": "4-24-2017",
+  "endDate": "5-14-2019",
+  "consultant": "resource:org.capgemeni.sogeti.Consultant#CONSULTANT1",
+  "client": "resource:org.capgemeni.sogeti.Client#CLIENT1"
+}
+
+// Request 2nd Consultant
+{
+  "$class": "org.capgemeni.sogeti.RequestConsultant",
+  "sowId": "SOW2",
+  "requirement1": "PowerBI Dashboards",
+  "requirement2": "",
+  "requirement3": "",
+  "startDate": "5-12-2017",
+  "endDate": "5-14-2019",
+  "consultant": "resource:org.capgemeni.sogeti.Consultant#CONSULTANT2",
+  "client": "resource:org.capgemeni.sogeti.Client#CLIENT1"
+}

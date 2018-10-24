@@ -1,0 +1,47 @@
+{
+  "$class": "org.capgemeni.sogeti.Employee",
+  "empId": "EMP1",
+  "name": "Carlos Rangel",
+  "title": "Consultant",
+  "type": "Blockchain",
+  "skill1": "",
+  "skill2": "",
+  "skill3": "",
+  "company": "resource:org.capgemeni.sogeti.Company#COMPANY1"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Employee",
+  "empId": "EMP2",
+  "name": "Keyur Patel",
+  "title": "Consultant",
+  "type": "BI",
+  "skill1": "PowerBI",
+  "skill2": "",
+  "skill3": "",
+  "company": "resource:org.capgemeni.sogeti.Company#COMPANY1"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Employee",
+  "empId": "EMP3",
+  "name": "Puneet Mittal",
+  "title": "Senior Consultant",
+  "type": "Web",
+  "skill1": "C#",
+  "skill2": "",
+  "skill3": "",
+  "company": "resource:org.capgemeni.sogeti.Company#COMPANY1"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Employee",
+  "empId": "EMP4",
+  "name": "Van Tran",
+  "title": "Associate Consultant",
+  "type": "BI",
+  "skill1": "PowerBI",
+  "skill2": "",
+  "skill3": "",
+  "company": "resource:org.capgemeni.sogeti.Company#COMPANY2"
+}

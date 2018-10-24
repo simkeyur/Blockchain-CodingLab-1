@@ -1,0 +1,11 @@
+{
+  "$class": "org.capgemeni.sogeti.Company",
+  "companyId": "COMPANY1",
+  "name": "Sogeti-Dallas"
+}
+
+{
+  "$class": "org.capgemeni.sogeti.Company",
+  "companyId": "COMPANY2",
+  "name": "Sogeti-Austin"
+}
